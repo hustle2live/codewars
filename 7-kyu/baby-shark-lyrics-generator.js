@@ -1,5 +1,5 @@
 // Baby Shark Lyrics
-// Kata Url : https://www.codewars.com/kata/5d076515e102162ac0dc514e/solutions/javascript
+// Kata Url : https://www.codewars.com/kata/5d076515e102162ac0dc514e/
 
 // Create a function, as short as possible, that returns this lyrics.
 // Your code should be less than 300 characters. 
