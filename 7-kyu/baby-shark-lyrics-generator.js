@@ -1,31 +1,23 @@
+// Baby Shark Lyrics
+// baby shark
+
+// Create a function, as short as possible, that returns this lyrics.
+// Your code should be less than 300 characters. Watch out for the three points at the end of the song.
+
 function babySharkLyrics() {
-   const dodo = ', doo doo doo doo doo doo\n';
-   const repeatString = (greetings) => `${greetings}${dodo}`;
-   const finalWord = (greetings) => greetings + '!\n';
-   const name = [
-      'Baby shark',
-      'Mommy shark',
-      'Daddy shark',
-      'Grandma shark',
-      'Grandpa shark',
-      "Let's go hunt",
-      'Run away,…'
+   const [dodo, arr, repeat, final] = [
+      ', doo doo doo doo doo doo\n',
+      ['Baby shark', 'Mommy shark', 'Daddy shark', 'Grandma shark', 'Grandpa shark', "Let's go hunt", 'Run away,…'],
+      (name) => name + dodo,
+      (str) => `${str}!\n`
    ];
-
    let song = '';
-
-   for (let k = 0; k < name.length; k++) {
-      if (k === name.length - 1) {
-         song += name[name.length - 1];
-      } else {
+   for (let k = 0; k < arr.length; k++) {
+      if (k === arr.length - 1) song += arr[arr.length - 1];
+      else
          for (let i = 0; i < 4; i++) {
-            if (i === 3) {
-               song += finalWord(name[k]);
-            } else {
-               song += repeatString(name[k]);
-            }
+            song += i === 3 ? final(arr[k]) : repeat(arr[k]);
          }
-      }
    }
    // console.log(song);
    return song;
