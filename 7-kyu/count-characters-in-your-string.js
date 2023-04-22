@@ -5,12 +5,18 @@
 
 // What if the string is empty? Then the result should be empty object literal, {}.
 
-
-function count(str) {
+// method 1
+function count1(str) {
    const obj = {};
    for (const key of str) obj[key] = Object.keys(obj).includes(key) ? ++obj[key] : 1;
    return obj;
 }
+
+// method 2
+const count = (str) => [...str].reduce((obj, key) => (obj[key] = obj.hasOwnProperty(key) ? ++obj[key] : 1) && obj, {});
+
+
+
 
 
 
