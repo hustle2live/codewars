@@ -12,7 +12,7 @@
 
 
 
-const hotpo = (n, i = 0) => {
+const hotpo1 = (n, i = 0) => {
    if (n === 0 || n === 1) return i;
    const even = n % 2 === 0;
    n = even ? n / 2 : n * 3 + 1;
@@ -22,7 +22,7 @@ const hotpo = (n, i = 0) => {
 
 
 // second method
-const hotpo2 = (n, i = 0) => (n === 0 || n === 1 ? i : n % 2 === 0 ? hotpo(n / 2, ++i) : hotpo(n * 3 + 1, ++i));
+const hotpo = (n, i = 0) => (n <= 1 ? i : !(n % 2) ? hotpo(n / 2, ++i) : hotpo(n * 3 + 1, ++i));
 
 
 
