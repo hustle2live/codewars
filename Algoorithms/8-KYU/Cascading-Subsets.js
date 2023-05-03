@@ -6,8 +6,6 @@
 // each_cons([1,2,3,4], 3)
 //   #=> [[1,2,3],[2,3,4]]
 
-// https://www.codewars.com/kata/545af3d185166a3dec001190/
-
 // simple solution
 function eachCons1(array, n, newArr = []) {
    if (!array.length) return newArr;
@@ -23,7 +21,6 @@ const eachCons = (array, n) =>
    array.reduce((acc, _, i, arr) => {
       return arr.length - i >= n ? [...acc, arr.slice(i, i + n)] : acc;
    }, []);
-
 
 
 
