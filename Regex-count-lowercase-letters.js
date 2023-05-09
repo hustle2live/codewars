@@ -4,12 +4,10 @@
 
 
 function lowercaseCount(str) {
-   if (!str) return 0;
-
-   const re = /[a-z]+/g;
-   const result = re.exec(str);
-   return result ? result[0].length : 0;
-}
+    const re = /[a-z]/g;
+    const result = str.match(re);
+    return result ? result.length : 0;
+ }
 
 
 lowercaseCount('abc'); // ===> 3
