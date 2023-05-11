@@ -12,18 +12,12 @@
 
 // https://www.codewars.com/kata/59fca81a5712f9fa4700159a/
 
-function toBinary(n, bNum = '') {
-//    console.log((n % 2).toFixed(2));
-//    const decr = n % 2;
 
-//    if (decr !== 0) {
-//       bNum += decr.toFixed(0);
-//       n = n - decr;
-//       return toBinary(n, bNum);
-//    }
-//    return bNum;
-   console.log((0 % 2));
 
+
+
+function toBinary(n) {
+   return +n.toString(2);
 }
 
-console.log(toBinary(5) === '101');
+
