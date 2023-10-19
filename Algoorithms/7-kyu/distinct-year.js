@@ -36,3 +36,9 @@ const distinctDigitYear3 = (year) =>
    new Set(JSON.stringify(++year).split('')).size !== Array.from(String(year), Number).length
       ? distinctDigitYear(year)
       : year;
+
+const distinctDigitYear4 = (year) =>
+   new Set([...(++year + '')]).size !== [...(year + '')].length ? distinctDigitYear4(year) : year;
+
+// distinctDigitYear4(1987);
+console.log(distinctDigitYear4(1987));
