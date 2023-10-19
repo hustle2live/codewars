@@ -41,4 +41,4 @@ const distinctDigitYear4 = (year) =>
    new Set([...(++year + '')]).size !== [...(year + '')].length ? distinctDigitYear4(year) : year;
 
 // distinctDigitYear4(1987);
-console.log(distinctDigitYear4(1987));
+// console.log(distinctDigitYear4(1987));
