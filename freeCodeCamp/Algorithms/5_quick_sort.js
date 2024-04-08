@@ -2,15 +2,16 @@ let counter = 0;
 
 function quickSort(array) {
    if (array.length < 2) return array;
-
-   const target = array[0];
+   const idxTarget = Math.floor(array.length / 2);
+   const target = array[idxTarget];
    const less = [];
    const more = [];
 
-   for (let i = 1; i < array.length; i++) {
-      if (array[i] <= target) less.push(array[i]);
-      else more.push(array[i]);
+   for (let i = 0; i < array.length; i++) {
       counter++;
+
+      if (i === idxTarget) continue;
+      array[i] <= target ? less.push(array[i]) : more.push(array[i]);
    }
 
    return [...quickSort(less), target, ...quickSort(more)];
