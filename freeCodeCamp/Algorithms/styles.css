@@ -1,0 +1,9 @@
+.btn {
+   margin: 300px;
+   font-size: 24px;
+   padding: 30px 60px;
+}
+
+.btn span {
+   color: red;
+}
